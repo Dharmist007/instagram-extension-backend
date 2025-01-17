@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Welcome! Your Payment Has Been Received</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        max-width: 680px;
+        background-color: #f5f5f5;
+      }
+
+      ol li::marker {
+        font-weight: 600;
+      }
+
+      ol ul {
+        margin-top: 4px;
+        padding-left: 17px;
+      }
+
+      li {
+        margin-bottom: 7px;
+      }
+
+      p {
+        margin-bottom: 0;
+        margin-top: 4px;
+        line-height: 1.4;
+      }
+
+      .table {
+        max-width: 650px;
+        margin: auto;
+        background-color: #e1c8fe;
+        border: 1px solid #8148cc48;
+      }
+    </style>
+  </head>
+
+  <body
+    class="body"
+    style="
+      padding: 0 !important;
+      margin: 0 !important;
+      display: block !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      -webkit-text-size-adjust: none;
+      background-color: #f5f5f5;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 400;
+    "
+  >
+    <table
+      style="padding: 15px 8px; border-radius: 10px"
+      cellpadding="0"
+      cellspacing="0"
+      height="100%"
+      width="100%"
+    >
+      <tbody>
+        <tr>
+          <td align="center" valign="top">
+            <table
+              style="
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+                border-spacing: 0px;
+                display: block;
+                padding: 15px 10px 0px;
+                overflow: hidden;
+                font-size: 15px;
+                background-color: #ffffff;
+              "
+              cellpadding="0"
+              cellspacing="0"
+              width="100%"
+            >
+              <tbody style="width: 100%; display: inline-table">
+                <!-- Logo -->
+                <tr>
+                  <td style="text-align: center; width: 100%">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/34/34362.png"
+                      style="width: 100px; display: block; margin: auto"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #414141; padding-top: 40px" align="left">
+                    <p>Hi <strong><%= name %>,</strong></p>
+                    <p>
+                      Thank you for your payment! Your account is now active,
+                      and you can start using the tool right away. Below are
+                      your login credentials:
+                    </p>
+
+                    <ul>
+                      <li><span>Username:</span> <strong><%= email %></strong></li>
+                      <li>
+                        <span>Password: </span> <strong><%= password %></strong>
+                      </li>
+                    </ul>
+
+                    <div>
+                      <h4 style="margin-bottom: 0">Extension Setup</h4>
+
+                      <p>
+                        Attached is the extension file you’ll need to add to
+                        your browser. Please follow these steps to set it up:
+                      </p>
+
+                      <ol>
+                        <li>
+                          <strong>Download and Extract the Files:</strong>
+
+                          <ul>
+                            <li>Download the attached ZIP file -> <%=downloadLink%></li>
+                            <li>
+                              Extract the contents of the ZIP folder to your
+                              device.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong>Add the Extension to Your Browser: </strong>
+
+                          <ul>
+                            <li>
+                              Open your browser and go to
+                              <i>Manage Extensions</i>.
+                            </li>
+                            <li>
+                              Toggle on the <i>Developer Mode</i> option on this
+                              page.
+                            </li>
+                            <li>Click the <i>Load Unpacked</i> button.</li>
+                            <li>
+                              Select the extracted extension folder. The
+                              extension will now be added to your browser.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong>Using the Tool: </strong>
+
+                          <ul>
+                            <li>
+                              Open Instagram and navigate to the
+                              <i>Close Friends</i> page.
+                            </li>
+                            <li>Run the extension.</li>
+                            <li>
+                              Log in with the credentials provided above to
+                              start using the tool.
+                            </li>
+                            <li>
+                              Click on the Upload button to upload the list of
+                              your followers.
+                            </li>
+                            <li>
+                              You will be redirected to a page where you can
+                              upload the list of your followers.
+                            </li>
+                            <li>
+                              After uploading the list come back to the close
+                              friends page and run the extension.
+                            </li>
+                            <li>
+                              Enter the number of close friends you want to add
+                              from your list.
+                            </li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </div>
+
+                    <p>
+                      <i
+                        >If you encounter any issues or need assistance, feel
+                        free to reach out.</i
+                      >
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="color: #212121; padding-top: 40px">
+                    <p>Thanks & Regards,</p>
+                    <p>Team HR</p>
+                    <!-- company name -->
+                    <p>Insta Tools</p>
+                    <!-- company link -->
+                    <div style="padding-bottom: 7px">
+                      <a
+                        href="http://insta-tools.surge.sh/login"
+                        style="
+                          text-decoration: none;
+                          font-size: 14px;
+                          display: inline-block;
+                          white-space: nowrap;
+                        "
+                      >
+                        www.insta-tools.surge.sh
+                      </a>
+                    </div>
+
+                    <!-- company logo -->
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/34/34362.png"
+                      style="width: 42px; padding-bottom: 6px"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
